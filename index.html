@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mohamed Sami Fatouh Elgohary - Data Analyst & AI Practitioner Portfolio. Transforming raw datasets into actionable insights through Python automation, advanced SQL, and predictive analytics." />
+  <meta name="keywords" content="Mohamed Sami Fatouh Elgohary, Data Analyst, AI Practitioner, Python, SQL, Machine Learning, Power BI, Portfolio" />
+  <meta name="author" content="Mohamed Sami Fatouh Elgohary" />
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mohamed Sami Fatouh Elgohary | Data Analyst & AI Practitioner" />
+  <meta property="og:description" content="Transforming raw, complex datasets into actionable business insights through robust Python automation, advanced SQL querying, and precise predictive analytics." />
+  
+  <title>Mohamed Sami Fatouh Elgohary | Data Analyst & AI Practitioner</title>
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="splash-active">
+  <!-- Welcome Splash Screen (Black Screen Entrance) -->
+  <div id="splash-screen" class="splash-screen" role="dialog" aria-modal="true" aria-label="Welcome Screen">
+    <div class="splash-backdrop"></div>
+    <div class="splash-glow" aria-hidden="true"></div>
+
+    <!-- Kinetic Action Elements Triggered on Enter -->
+    <div class="splash-warp-beam" aria-hidden="true"></div>
+    <div class="splash-shockwave" aria-hidden="true"></div>
+
+    <div class="splash-container">
+      <div class="splash-badge">
+        <span class="splash-status-dot"></span>
+        <span>Portfolio Initialized &bull; Data &amp; AI</span>
+      </div>
+
+      <h1 class="splash-title">
+        <span id="typewriter-headline"></span><span class="typewriter-cursor" aria-hidden="true">|</span>
+      </h1>
+
+      <p class="splash-subtitle" id="typewriter-sub"></p>
+
+      <p class="splash-statement">
+        Transforming raw, complex datasets into actionable business insights through robust Python automation, advanced SQL querying, and precise predictive analytics.
+      </p>
+
+      <div class="splash-action-box">
+        <button id="splash-enter-btn" class="splash-enter-btn" aria-label="Press Enter or click to enter the portfolio">
+          <span class="key-badge">ENTER ↵</span>
+          <span class="enter-text">Press Enter to Show Portfolio</span>
+          <span class="arrow-neon-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="enter-arrow-icon" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+            <span class="arrow-neon-glow" aria-hidden="true"></span>
+          </span>
+        </button>
+        <span class="splash-hint">Press [Enter] on keyboard or click anywhere to enter</span>
+      </div>
+    </div>
+  </div>
+  <!-- Background Glow Accents -->
+  <div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+
+  <!-- Header / Navigation -->
+  <header class="site-header" id="navbar">
+    <div class="container header-container">
+      <a href="#hero" class="brand-logo" aria-label="Mohamed Sami Portfolio Homepage">
+        <span class="logo-symbol">&lt;</span>
+        <span class="logo-name">Mohamed Sami</span>
+        <span class="logo-symbol">/&gt;</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Controls: Theme Switcher & Mobile Toggle -->
+      <div class="header-controls">
+        <button id="theme-toggle" class="icon-btn theme-toggle-btn" aria-label="Toggle light and dark theme">
+          <!-- Sun Icon (shown in dark mode) -->
+          <svg class="theme-icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <!-- Moon Icon (shown in light mode) -->
+          <svg class="theme-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <button id="mobile-menu-btn" class="icon-btn mobile-menu-toggle" aria-label="Open mobile navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-nav" class="mobile-nav-drawer" aria-label="Mobile Navigation" hidden>
+      <ul class="mobile-nav-list">
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+        <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+        <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
+        <li><a href="#services" class="mobile-nav-link">Services</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- 1. Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="status-pulse"></span>
+            <span>Available for Opportunities &amp; Freelance</span>
+          </div>
+
+          <h1 class="hero-name">
+            Mohamed Sami <br class="mobile-break" />
+            <span class="text-gradient">Fatouh Elgohary</span>
+          </h1>
+
+          <p class="hero-title">Data Analyst &amp; AI Practitioner</p>
+
+          <p class="hero-intro">
+            Transforming raw, complex datasets into actionable business insights through robust Python automation, advanced SQL querying, and precise predictive analytics.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <span>View Projects</span>
+              <span class="arrow-neon-wrapper">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-icon" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+                <span class="arrow-neon-glow" aria-hidden="true"></span>
+              </span>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <span>Contact Me</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-icon" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Hero Metrics / Quick Stats -->
+          <div class="hero-metrics">
+            <div class="metric-item">
+              <span class="metric-value" data-count="4" data-suffix="+">4+</span>
+              <span class="metric-label">Featured Projects</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <span class="metric-value" data-count="6" data-suffix="+">6+</span>
+              <span class="metric-label">Professional Badges</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <span class="metric-value" data-count="100" data-suffix="%">100%</span>
+              <span class="metric-label">Client Focused</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual: Profile Portrait & Tech Floaters -->
+        <div class="hero-visual">
+          <div class="hero-portrait-wrapper">
+            <!-- Ambient Glow Behind Photo -->
+            <div class="portrait-glow" aria-hidden="true"></div>
+
+            <!-- Profile Image Frame -->
+            <div class="hero-portrait-frame">
+              <img 
+                src="assets/profile.jpg" 
+                alt="Mohamed Sami Fatouh Elgohary at The British University in Egypt" 
+                class="hero-portrait-img" 
+                loading="eager"
+              />
+              <div class="portrait-overlay"></div>
+            </div>
+
+            <!-- Floating Badge: BUE AI Training Program -->
+            <div class="floating-badge badge-university" aria-hidden="true">
+              <div class="badge-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                  <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                </svg>
+              </div>
+              <div class="badge-info">
+                <span class="badge-headline">BUE AI Program</span>
+                <span class="badge-caption">British University in Egypt</span>
+              </div>
+            </div>
+
+            <!-- Floating Code Window / Pipeline Status -->
+            <div class="floating-code-card" aria-hidden="true">
+              <div class="floating-code-header">
+                <div class="mini-dots">
+                  <span class="mini-dot dot-red"></span>
+                  <span class="mini-dot dot-yellow"></span>
+                  <span class="mini-dot dot-green"></span>
+                </div>
+                <span class="mini-title">pipeline_analysis.py</span>
+                <span class="mini-status"><span class="live-dot"></span> Active</span>
+              </div>
+              <code class="mini-code">predict_growth(insights, horizon=90)</code>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. About Me Section -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">01. Overview</span>
+          <h2 class="section-title">About Me</h2>
+          <div class="title-bar"></div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card main-bio-card">
+            <div class="bio-header">
+              <div class="bio-avatar-frame">
+                <img src="assets/profile.jpg" alt="Mohamed Sami Fatouh Elgohary" class="bio-avatar-img" />
+              </div>
+              <div>
+                <h3 class="card-title">Academic &amp; Technical Foundation</h3>
+                <span class="bio-badge-tag">Menoufia University &bull; BUE AI Track</span>
+              </div>
+            </div>
+
+            <p class="about-text">
+              Undergraduate Computer Science student at <strong>Menoufia University</strong> with a solid foundation in Data Analytics, Machine Learning algorithms, and relational database management. Over the past several years, I have combined rigorous academic learning with hands-on project execution, processing complex logs, developing data engineering pipelines, and generating strategic business metrics.
+            </p>
+
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <div class="highlight-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                </div>
+                <div>
+                  <span class="highlight-title">Menoufia University</span>
+                  <span class="highlight-sub">Computer Science Undergraduate</span>
+                </div>
+              </div>
+
+              <div class="highlight-item">
+                <div class="highlight-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                </div>
+                <div>
+                  <span class="highlight-title">Data Pipelines &amp; Logs</span>
+                  <span class="highlight-sub">ETL, Cleansing &amp; Metrics</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-card objective-card">
+            <div class="bio-icon-box accent-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="card-icon" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"></circle>
+                <circle cx="12" cy="12" r="6"></circle>
+                <circle cx="12" cy="12" r="2"></circle>
+              </svg>
+            </div>
+            <h3 class="card-title">Career Objective</h3>
+            <p class="about-text objective-text">
+              To secure a dynamic role as a <strong>Data Analyst</strong> or <strong>AI Practitioner</strong> within an innovative, data-driven organization, leveraging technical expertise in Python and SQL to build high-performance data workflows and predictive models.
+            </p>
+
+            <div class="objective-banner">
+              <span class="banner-highlight">Target Focus:</span>
+              <span>Predictive Modeling &bull; Business Intelligence &bull; Scalable Data Pipelines</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Skills Section -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">02. Capabilities</span>
+          <h2 class="section-title">Technical Skills</h2>
+          <div class="title-bar"></div>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Category 1: Programming Languages -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon-wrapper">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="category-icon" aria-hidden="true">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <div>
+                <h3 class="category-title">Programming Languages</h3>
+                <span class="category-subtitle">Core scripting, queries &amp; modeling</span>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Python</span>
+                  <span class="skill-details">Pandas, NumPy, Matplotlib, Seaborn</span>
+                </div>
+                <div class="skill-meter" aria-label="Python Proficiency Level 90%">
+                  <div class="meter-bar" style="width: 90%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">SQL</span>
+                  <span class="skill-details">T-SQL, Complex Joins, Query Optimization</span>
+                </div>
+                <div class="skill-meter" aria-label="SQL Proficiency Level 88%">
+                  <div class="meter-bar" style="width: 88%;"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-tags">
+              <span class="skill-badge">Python 3</span>
+              <span class="skill-badge">Pandas</span>
+              <span class="skill-badge">NumPy</span>
+              <span class="skill-badge">Matplotlib</span>
+              <span class="skill-badge">Seaborn</span>
+              <span class="skill-badge">T-SQL</span>
+              <span class="skill-badge">Complex Joins</span>
+              <span class="skill-badge">Optimization</span>
+            </div>
+          </div>
+
+          <!-- Category 2: Data Analytics & BI -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon-wrapper">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="category-icon" aria-hidden="true">
+                  <line x1="18" y1="20" x2="18" y2="10"></line>
+                  <line x1="12" y1="20" x2="12" y2="4"></line>
+                  <line x1="6" y1="20" x2="6" y2="14"></line>
+                </svg>
+              </div>
+              <div>
+                <h3 class="category-title">Data Analytics &amp; BI</h3>
+                <span class="category-subtitle">Transforming data to strategic vision</span>
+              </div>
+            </div>
+
+            <div class="skill-group">
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Exploratory Data Analysis (EDA)</span>
+                  <span class="skill-details">Distribution, Outliers &amp; Statistical Inferences</span>
+                </div>
+                <div class="skill-meter" aria-label="EDA Proficiency Level 92%">
+                  <div class="meter-bar" style="width: 92%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Power BI &amp; Modeling</span>
+                  <span class="skill-details">Star Schema, KPI Dashboards, DAX</span>
+                </div>
+                <div class="skill-meter" aria-label="Power BI Proficiency Level 85%">
+                  <div class="meter-bar" style="width: 85%;"></div>
+                </div>
+              </div>
+
+              <div class="skill-item">
+                <div class="skill-info">
+                  <span class="skill-name">Data Cleaning &amp; Preprocessing</span>
+                  <span class="skill-details">Imputation, Type Casting, Normalization</span>
+                </div>
+                <div class="skill-meter" aria-label="Data Cleaning Proficiency Level 94%">
+                  <div class="meter-bar" style="width: 94%;"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skill-tags">
+              <span class="skill-badge">EDA</span>
+              <span class="skill-badge">Power BI</span>
+              <span class="skill-badge">Star Schema</span>
+              <span class="skill-badge">Data Modeling</span>
+              <span class="skill-badge">Data Cleaning</span>
+              <span class="skill-badge">KPI Architecture</span>
+            </div>
+          </div>
+
+          <!-- Category 3: Tools & Platforms -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon-wrapper">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="category-icon" aria-hidden="true">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </div>
+              <div>
+                <h3 class="category-title">Tools &amp; Platforms</h3>
+                <span class="category-subtitle">Ecosystem &amp; operational software</span>
+              </div>
+            </div>
+
+            <div class="tools-grid">
+              <div class="tool-item">
+                <span class="tool-bullet">&bull;</span>
+                <span class="tool-name">Git &amp; GitHub</span>
+              </div>
+              <div class="tool-item">
+                <span class="tool-bullet">&bull;</span>
+                <span class="tool-name">Jupyter Notebooks</span>
+              </div>
+              <div class="tool-item">
+                <span class="tool-bullet">&bull;</span>
+                <span class="tool-name">SQL Server Mgmt Studio (SSMS)</span>
+              </div>
+              <div class="tool-item">
+                <span class="tool-bullet">&bull;</span>
+                <span class="tool-name">Kaggle</span>
+              </div>
+              <div class="tool-item">
+                <span class="tool-bullet">&bull;</span>
+                <span class="tool-name">Khamsat Freelancing</span>
+              </div>
+              <div class="tool-item">
+                <span class="tool-bullet">&bull;</span>
+                <span class="tool-name">Oracle MyLearn</span>
+              </div>
+            </div>
+
+            <div class="skill-tags mt-auto">
+              <span class="skill-badge">Version Control</span>
+              <span class="skill-badge">Jupyter</span>
+              <span class="skill-badge">SSMS</span>
+              <span class="skill-badge">Kaggle Datasets</span>
+              <span class="skill-badge">Oracle Cloud</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Featured Projects Section -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">03. Portfolio</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <div class="title-bar"></div>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <div class="project-meta">
+                <span class="project-category">Market Analytics</span>
+                <span class="project-number">01</span>
+              </div>
+              <h3 class="project-title">Car Sales Market &amp; Performance Analysis</h3>
+            </div>
+            
+            <p class="project-desc">
+              Comprehensive statistical exploration examining automotive market dynamics, vehicle valuation models, depreciation trends, and correlation heatmaps across diverse specifications.
+            </p>
+
+            <div class="project-tech-stack">
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">Pandas</span>
+              <span class="tech-pill">Seaborn</span>
+              <span class="tech-pill">Matplotlib</span>
+            </div>
+
+            <div class="project-footer">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View Car Sales Market & Performance Analysis on GitHub">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-icon" aria-hidden="true">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+                <span>View on GitHub</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <div class="project-meta">
+                <span class="project-category">Business Intelligence</span>
+                <span class="project-number">02</span>
+              </div>
+              <h3 class="project-title">General Sales Data &amp; Business Insights</h3>
+            </div>
+
+            <p class="project-desc">
+              End-to-end commercial sales evaluation utilizing dimensional data modeling (Star Schema) and SQL analytical queries to uncover seasonal purchasing habits, margins, and key performance indicators.
+            </p>
+
+            <div class="project-tech-stack">
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">SQL</span>
+              <span class="tech-pill">Data Modeling</span>
+              <span class="tech-pill">KPI Analytics</span>
+            </div>
+
+            <div class="project-footer">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View General Sales Data & Business Insights on GitHub">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-icon" aria-hidden="true">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+                <span>View on GitHub</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <div class="project-meta">
+                <span class="project-category">Data Engineering</span>
+                <span class="project-number">03</span>
+              </div>
+              <h3 class="project-title">Talabat Data Engineering Pipeline</h3>
+            </div>
+
+            <p class="project-desc">
+              Engineered an automated data extraction and transformation pipeline processing food delivery orders, restaurant catalogs, and customer logs into an optimized, query-ready relational schema.
+            </p>
+
+            <div class="project-tech-stack">
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">SQL</span>
+              <span class="tech-pill">Pipeline Architecture</span>
+              <span class="tech-pill">ETL</span>
+            </div>
+
+            <div class="project-footer">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View Talabat Data Engineering Pipeline on GitHub">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-icon" aria-hidden="true">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+                <span>View on GitHub</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card">
+            <div class="project-card-header">
+              <div class="project-meta">
+                <span class="project-category">Exploratory &amp; ML</span>
+                <span class="project-number">04</span>
+              </div>
+              <h3 class="project-title">Titanic Dataset Exploration &amp; Manipulation</h3>
+            </div>
+
+            <p class="project-desc">
+              In-depth passenger survival analysis featuring rigorous feature engineering, missing age imputation, family size aggregation, and socio-economic demographic correlation with survival outcomes.
+            </p>
+
+            <div class="project-tech-stack">
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">Pandas</span>
+              <span class="tech-pill">EDA</span>
+              <span class="tech-pill">Feature Eng.</span>
+            </div>
+
+            <div class="project-footer">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View Titanic Dataset Exploration on GitHub">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="link-icon" aria-hidden="true">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+                <span>View on GitHub</span>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Professional Experience & Certifications -->
+    <section id="experience" class="section experience-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">04. Career &amp; Credentials</span>
+          <h2 class="section-title">Experience &amp; Certifications</h2>
+          <div class="title-bar"></div>
+        </div>
+
+        <div class="timeline">
+          <!-- Timeline Item 1: Khamsat Freelance -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <div class="marker-dot current-active"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <span class="timeline-badge badge-active">Present</span>
+                <span class="timeline-category">Professional Role</span>
+              </div>
+              <h3 class="timeline-role">Freelance Data Analyst</h3>
+              <h4 class="timeline-organization">Khamsat Platform</h4>
+              <p class="timeline-desc">
+                Partnering with diverse regional clients to deliver customized data cleaning, automated Excel/Python pipelines, and exploratory analysis to resolve real business questions and enhance operational decision-making.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2: Certifications & Training -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <div class="marker-dot"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <span class="timeline-badge">Accredited Credentials</span>
+                <span class="timeline-category">Certifications &amp; Training</span>
+              </div>
+              <h3 class="timeline-role">Specialized Technical Training</h3>
+              <h4 class="timeline-organization">Recognized National &amp; Global Programs</h4>
+              
+              <div class="certifications-grid">
+                <div class="cert-card">
+                  <div class="cert-icon">&check;</div>
+                  <div class="cert-text">
+                    <strong>AXIS Data Analysis</strong>
+                    <span>Certificate of Achievement</span>
+                  </div>
+                </div>
+
+                <div class="cert-card">
+                  <div class="cert-icon">&check;</div>
+                  <div class="cert-text">
+                    <strong>100 Million Expert Platform</strong>
+                    <span>Certification of Completion</span>
+                  </div>
+                </div>
+
+                <div class="cert-card">
+                  <div class="cert-icon">&check;</div>
+                  <div class="cert-text">
+                    <strong>Mahartk Platform</strong>
+                    <span>Professional Certificate</span>
+                  </div>
+                </div>
+
+                <div class="cert-card">
+                  <div class="cert-icon">&check;</div>
+                  <div class="cert-text">
+                    <strong>BUE AI Training Program</strong>
+                    <span>British University in Egypt</span>
+                  </div>
+                </div>
+
+                <div class="cert-card">
+                  <div class="cert-icon">&check;</div>
+                  <div class="cert-text">
+                    <strong>DEPI Data Science Track</strong>
+                    <span>Digital Egypt Pioneers Initiative</span>
+                  </div>
+                </div>
+
+                <div class="cert-card">
+                  <div class="cert-icon">&check;</div>
+                  <div class="cert-text">
+                    <strong>Oracle AI for You</strong>
+                    <span>Oracle MyLearn Digital Badge</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3: Side Experience -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <div class="marker-dot"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <span class="timeline-badge">Foundational Competency</span>
+                <span class="timeline-category">Operations</span>
+              </div>
+              <h3 class="timeline-role">Barista / Customer Operations</h3>
+              <h4 class="timeline-organization">Side Experience</h4>
+              <p class="timeline-desc">
+                Cultivated high-stress adaptability, attention to meticulous detail, swift active listening, team coordination, and customer-first communication habits that directly enrich technical client engagements.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Services Offered Section -->
+    <section id="services" class="section services-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">05. Solutions</span>
+          <h2 class="section-title">Services Offered</h2>
+          <div class="title-bar"></div>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 1 -->
+          <div class="service-card">
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="service-icon" aria-hidden="true">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">Data Analysis &amp; Cleaning</h3>
+            <p class="service-desc">
+              Transforming fragmented, raw, and error-prone records into unified, high-integrity datasets. Handling missing values, duplicate removal, outlier treatment, and data schema normalization.
+            </p>
+            <ul class="service-points">
+              <li>Data Validation &amp; Type Casting</li>
+              <li>Outlier &amp; Anomaly Detection</li>
+              <li>T-SQL Data Cleansing Procedures</li>
+            </ul>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-card">
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="service-icon" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                <line x1="11" y1="8" x2="11" y2="14"></line>
+                <line x1="8" y1="11" x2="14" y2="11"></line>
+              </svg>
+            </div>
+            <h3 class="service-title">Exploratory Data Analysis (EDA)</h3>
+            <p class="service-desc">
+              Uncovering hidden patterns, multi-variable correlations, and behavior distributions through high-impact visualizations with Seaborn, Matplotlib, and analytical hypothesis testing.
+            </p>
+            <ul class="service-points">
+              <li>Correlation &amp; Statistical Inferences</li>
+              <li>Cohort &amp; Demographic Profiling</li>
+              <li>Executive Trend Summaries</li>
+            </ul>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card">
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="service-icon" aria-hidden="true">
+                <polyline points="4 17 10 11 4 5"></polyline>
+                <line x1="12" y1="19" x2="20" y2="19"></line>
+              </svg>
+            </div>
+            <h3 class="service-title">Script Automation &amp; Tooling</h3>
+            <p class="service-desc">
+              Building custom Python scripts to eliminate repetitive manual workflows, automate routine CSV/Excel processing, and extract batch data from diverse digital sources efficiently.
+            </p>
+            <ul class="service-points">
+              <li>Automated File Ingestion &amp; Export</li>
+              <li>Scheduled Data Extraction Jobs</li>
+              <li>Custom Command-Line Utilities</li>
+            </ul>
+          </div>
+
+          <!-- Service 4 -->
+          <div class="service-card">
+            <div class="service-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="service-icon" aria-hidden="true">
+                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">AI &amp; Machine Learning Foundations</h3>
+            <p class="service-desc">
+              Implementing foundational supervised machine learning workflows including classification, regression modeling, feature selection, and model metric validation.
+            </p>
+            <ul class="service-points">
+              <li>Predictive Modeling &amp; Scoring</li>
+              <li>Feature Engineering Pipelines</li>
+              <li>Evaluation Metrics &amp; Benchmarking</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. Contact Section -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">06. Communication</span>
+          <h2 class="section-title">Get In Touch</h2>
+          <div class="title-bar"></div>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left Column: Direct Contacts & Social Links -->
+          <div class="contact-info-panel">
+            <h3 class="info-title">Let's collaborate on data-driven projects</h3>
+            <p class="info-desc">
+              Whether you are looking for an analytical mind to optimize your data workflows, develop predictive models, or discuss full-time opportunities, feel free to reach out.
+            </p>
+
+            <div class="contact-methods">
+              <div class="contact-method-item">
+                <div class="method-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div>
+                  <span class="method-label">Location</span>
+                  <span class="method-value">Egypt &bull; Remote Worldwide</span>
+                </div>
+              </div>
+
+              <div class="contact-method-item">
+                <div class="method-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <span class="method-label">Availability</span>
+                  <span class="method-value">Open to Full-Time, Contract &amp; Freelance</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Links: YouTube, LinkedIn, GitHub, Facebook -->
+            <div class="social-links-block">
+              <span class="social-heading">Connect via Social Channels:</span>
+              <div class="social-badges">
+                <!-- LinkedIn -->
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-badge" aria-label="Mohamed Sami on LinkedIn">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-icon" aria-hidden="true">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+                  <span>LinkedIn</span>
+                </a>
+
+                <!-- GitHub -->
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-badge" aria-label="Mohamed Sami on GitHub">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-icon" aria-hidden="true">
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                  </svg>
+                  <span>GitHub</span>
+                </a>
+
+                <!-- YouTube -->
+                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-badge" aria-label="Mohamed Sami on YouTube">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-icon" aria-hidden="true">
+                    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                    <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                  </svg>
+                  <span>YouTube</span>
+                </a>
+
+                <!-- Facebook -->
+                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-badge" aria-label="Mohamed Sami on Facebook">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-icon" aria-hidden="true">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                  </svg>
+                  <span>Facebook</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Clean HTML Contact Form -->
+          <div class="contact-form-panel">
+            <form id="contact-form" class="contact-form" novalidate>
+              <div class="form-group">
+                <label for="name" class="form-label">Full Name <span class="required-star">*</span></label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="e.g. Alex Morgan" required autocomplete="name" />
+                <span class="field-error" id="name-error">Please enter your name.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Email Address <span class="required-star">*</span></label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="e.g. alex@example.com" required autocomplete="email" />
+                <span class="field-error" id="email-error">Please enter a valid email address.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="subject" class="form-label">Subject <span class="required-star">*</span></label>
+                <input type="text" id="subject" name="subject" class="form-input" placeholder="Project Inquiry / Job Opportunity" required />
+                <span class="field-error" id="subject-error">Please provide a subject.</span>
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">Message <span class="required-star">*</span></label>
+                <textarea id="message" name="message" rows="5" class="form-input form-textarea" placeholder="Describe your data needs, project scope, or opportunity details..." required></textarea>
+                <span class="field-error" id="message-error">Please enter your message.</span>
+              </div>
+
+              <button type="submit" id="submit-btn" class="btn btn-primary btn-block">
+                <span>Send Message</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="btn-icon" aria-hidden="true">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-copy">
+        <p>&copy; <span id="current-year">2026</span> Mohamed Sami Fatouh Elgohary. All rights reserved.</p>
+        <p class="footer-subtext">Designed &amp; Built with semantic HTML, modern CSS, and vanilla JS.</p>
+      </div>
+
+      <a href="#hero" class="back-to-top" aria-label="Back to top">
+        <span>Back to Top</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div id="toast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-icon">&check;</div>
+    <div class="toast-content">
+      <h4 class="toast-title">Message Sent!</h4>
+      <p class="toast-desc">Thank you for reaching out. Mohamed will review your message soon.</p>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
